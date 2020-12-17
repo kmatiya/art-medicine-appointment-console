@@ -1,22 +1,20 @@
-package api.regimen.medicine.art;
+package api.medicine.art.medication;
 
-import api.regimen.medicine.MedicineService;
-import api.regimen.weight.WeightRangeMapper;
+import api.medicine.MedicineService;
+import api.medicine.weight.WeightRangeMapper;
 import api.util.DosageAndWeightMapper;
 import metadata.MedicineNameMetaData;
 import metadata.NumberOfMedicineStandardMetaData;
 import model.DosageAndWeight;
 import model.medicineType.MedicineType;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
-public class AZT3TCNVP implements MedicineService {
+public class AZT3TC implements MedicineService {
 
     private final HashMap<String, DosageAndWeight> medicineDosage;
 
-    public AZT3TCNVP()
+    public AZT3TC()
     {
         medicineDosage = new HashMap<>();
 
@@ -39,7 +37,7 @@ public class AZT3TCNVP implements MedicineService {
 
     @Override
     public String getName() {
-        return MedicineNameMetaData.AZT_3TC_NVP;
+        return MedicineNameMetaData.AZT_3TC;
     }
 
     @Override

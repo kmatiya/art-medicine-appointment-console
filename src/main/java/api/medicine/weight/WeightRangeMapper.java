@@ -1,4 +1,4 @@
-package api.regimen.weight;
+package api.medicine.weight;
 
 public class WeightRangeMapper {
     public static String LESS_THAN_FOUR = "3 - 3.9 Kg";

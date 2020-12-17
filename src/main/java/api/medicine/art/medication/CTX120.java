@@ -1,7 +1,7 @@
-package api.regimen.medicine.art;
+package api.medicine.art.medication;
 
-import api.regimen.medicine.MedicineService;
-import api.regimen.weight.WeightRangeMapper;
+import api.medicine.MedicineService;
+import api.medicine.weight.WeightRangeMapper;
 import api.util.DosageAndWeightMapper;
 import metadata.MedicineNameMetaData;
 import metadata.NumberOfMedicineStandardMetaData;

@@ -1,26 +1,24 @@
-package api.regimen.medicine.art;
+package api.medicine.art.medication;
 
+import api.medicine.MedicineService;
+import api.medicine.weight.WeightRangeMapper;
 import api.util.DosageAndWeightMapper;
 import metadata.MedicineNameMetaData;
 import metadata.NumberOfMedicineStandardMetaData;
 import model.DosageAndWeight;
-import api.regimen.medicine.MedicineService;
 import model.medicineType.MedicineType;
-import api.regimen.weight.WeightRangeMapper;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
-public class NVP implements MedicineService {
+public class AZT3TCNVP implements MedicineService {
 
     private final HashMap<String, DosageAndWeight> medicineDosage;
 
-    public NVP()
+    public AZT3TCNVP()
     {
         medicineDosage = new HashMap<>();
 
-        medicineDosage.put(WeightRangeMapper.LESS_THAN_FOUR, DosageAndWeightMapper.setDosageAndWeightOfMedicine(3,3.9,1,1,MedicineType.TABLET));
+        medicineDosage.put(WeightRangeMapper.LESS_THAN_FOUR, DosageAndWeightMapper.setDosageAndWeightOfMedicine(3,3.9,1,1, MedicineType.TABLET));
         medicineDosage.put(WeightRangeMapper.LESS_THAN_SIX, DosageAndWeightMapper.setDosageAndWeightOfMedicine(4,5.9,1,1,MedicineType.TABLET));
         medicineDosage.put(WeightRangeMapper.LESS_THAN_TEN, DosageAndWeightMapper.setDosageAndWeightOfMedicine(6,9.9,1.5,1.5,MedicineType.TABLET));
         medicineDosage.put(WeightRangeMapper.LESS_THAN_FOURTEEN, DosageAndWeightMapper.setDosageAndWeightOfMedicine(10,13.9,2,2,MedicineType.TABLET));
@@ -39,7 +37,7 @@ public class NVP implements MedicineService {
 
     @Override
     public String getName() {
-        return MedicineNameMetaData.NVP;
+        return MedicineNameMetaData.AZT_3TC_NVP;
     }
 
     @Override

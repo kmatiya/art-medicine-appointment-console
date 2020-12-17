@@ -1,7 +1,7 @@
-package api.regimen.medicine.art;
+package api.medicine.art.medication;
 
-import api.regimen.medicine.MedicineService;
-import api.regimen.weight.WeightRangeMapper;
+import api.medicine.MedicineService;
+import api.medicine.weight.WeightRangeMapper;
 import api.util.DosageAndWeightMapper;
 import metadata.MedicineNameMetaData;
 import metadata.NumberOfMedicineStandardMetaData;
@@ -10,11 +10,11 @@ import model.medicineType.MedicineType;
 
 import java.util.HashMap;
 
-public class RAL implements MedicineService {
+public class DRV implements MedicineService {
 
     private final HashMap<String, DosageAndWeight> medicineDosage;
 
-    public RAL()
+    public DRV()
     {
         medicineDosage = new HashMap<>();
 
@@ -29,7 +29,7 @@ public class RAL implements MedicineService {
 
     @Override
     public String getName() {
-        return MedicineNameMetaData.RAL;
+        return MedicineNameMetaData.DRV;
     }
 
     @Override
