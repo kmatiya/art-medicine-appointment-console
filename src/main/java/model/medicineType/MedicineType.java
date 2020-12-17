@@ -1,4 +1,4 @@
-package api.regimen.medicine.medicineType;
+package model.medicineType;
 
 public enum MedicineType {
     LIQUID,

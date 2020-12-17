@@ -1,4 +1,4 @@
-package api.regimen.weight;
+package model;
 
 public class WeightRange {
     private String nameRange;

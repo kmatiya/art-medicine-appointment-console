@@ -1,10 +1,10 @@
-package api.regimen.dosage;
+package model;
 
-import api.regimen.medicine.medicineType.MedicineType;
+import model.medicineType.MedicineType;
 
 public class Dosage {
     private double morning;
-    private double afternoon;
+    private double evening;
     private MedicineType medicineType;
 
     public double getMorning() {
@@ -15,12 +15,12 @@ public class Dosage {
         this.morning = morning;
     }
 
-    public double getAfternoon() {
-        return afternoon;
+    public double getEvening() {
+        return evening;
     }
 
-    public void setAfternoon(double afternoon) {
-        this.afternoon = afternoon;
+    public void setEvening(double evening) {
+        this.evening = evening;
     }
 
     public MedicineType getMedicineType() {
