@@ -1,7 +1,4 @@
-package api.regimen.medicine;
-
-import api.regimen.dosage.Dosage;
-import api.regimen.weight.WeightRange;
+package model;
 
 public class DosageAndWeight {
     private WeightRange weightRange;
