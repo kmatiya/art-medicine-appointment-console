@@ -38,6 +38,6 @@ public class AZT3TC implements MedicineService {
 
     @Override
     public String getName() {
-        return "NVP";
+        return "AZT /3TC";
     }
 }
