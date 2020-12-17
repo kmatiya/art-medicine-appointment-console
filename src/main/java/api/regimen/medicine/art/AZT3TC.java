@@ -4,6 +4,7 @@ import api.regimen.medicine.MedicineService;
 import api.regimen.weight.WeightRangeMapper;
 import api.util.DosageAndWeightMapper;
 import metadata.MedicineNameMetaData;
+import metadata.NumberOfMedicineStandardMetaData;
 import model.DosageAndWeight;
 import model.medicineType.MedicineType;
 
@@ -39,5 +40,15 @@ public class AZT3TC implements MedicineService {
     @Override
     public String getName() {
         return MedicineNameMetaData.AZT_3TC;
+    }
+
+    @Override
+    public Integer getStandardDisperseNumberForAdults() {
+        return NumberOfMedicineStandardMetaData.SIXTY;
+    }
+
+    @Override
+    public Integer getStandardDisperseNumberForPaediatrics() {
+        return NumberOfMedicineStandardMetaData.SIXTY;
     }
 }

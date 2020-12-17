@@ -4,6 +4,7 @@ import api.regimen.medicine.MedicineService;
 import api.regimen.weight.WeightRangeMapper;
 import api.util.DosageAndWeightMapper;
 import metadata.MedicineNameMetaData;
+import metadata.NumberOfMedicineStandardMetaData;
 import model.DosageAndWeight;
 import model.medicineType.MedicineType;
 
@@ -40,4 +41,16 @@ public class ABC3TC implements MedicineService {
     public String getName() {
         return MedicineNameMetaData.ABC_3TC;
     }
+
+    @Override
+    public Integer getStandardDisperseNumberForAdults() {
+        return NumberOfMedicineStandardMetaData.SIXTY;
+    }
+
+    @Override
+    public Integer getStandardDisperseNumberForPaediatrics() {
+        return NumberOfMedicineStandardMetaData.SIXTY;
+    }
+
+
 }

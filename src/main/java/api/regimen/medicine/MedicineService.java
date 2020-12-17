@@ -8,4 +8,7 @@ import java.util.List;
 public interface MedicineService {
     HashMap<String,DosageAndWeight> getDosageAndWeightRange();
     String getName();
+    Integer getStandardDisperseNumberForAdults();
+    Integer getStandardDisperseNumberForPaediatrics();
+
 }
