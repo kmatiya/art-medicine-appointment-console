@@ -4,6 +4,7 @@ import api.regimen.medicine.MedicineService;
 import api.regimen.weight.WeightRangeMapper;
 import api.util.DosageAndWeightMapper;
 import metadata.MedicineNameMetaData;
+import metadata.NumberOfMedicineStandardMetaData;
 import model.DosageAndWeight;
 import model.medicineType.MedicineType;
 
@@ -39,5 +40,15 @@ public class LPVr  implements MedicineService {
     @Override
     public String getName() {
         return MedicineNameMetaData.LPV_r_LIQUID_OR_TABLETS;
+    }
+
+    @Override
+    public Integer getStandardDisperseNumberForAdults() {
+        return NumberOfMedicineStandardMetaData.ONE_HUNDRED_AND_TWENTY;
+    }
+
+    @Override
+    public Integer getStandardDisperseNumberForPaediatrics() {
+        return NumberOfMedicineStandardMetaData.SIXTY;
     }
 }

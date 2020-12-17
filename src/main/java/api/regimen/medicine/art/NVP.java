@@ -2,6 +2,7 @@ package api.regimen.medicine.art;
 
 import api.util.DosageAndWeightMapper;
 import metadata.MedicineNameMetaData;
+import metadata.NumberOfMedicineStandardMetaData;
 import model.DosageAndWeight;
 import api.regimen.medicine.MedicineService;
 import model.medicineType.MedicineType;
@@ -39,5 +40,15 @@ public class NVP implements MedicineService {
     @Override
     public String getName() {
         return MedicineNameMetaData.NVP;
+    }
+
+    @Override
+    public Integer getStandardDisperseNumberForAdults() {
+        return NumberOfMedicineStandardMetaData.SIXTY;
+    }
+
+    @Override
+    public Integer getStandardDisperseNumberForPaediatrics() {
+        return NumberOfMedicineStandardMetaData.SIXTY;
     }
 }

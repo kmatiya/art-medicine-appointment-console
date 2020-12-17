@@ -4,6 +4,7 @@ import api.regimen.medicine.MedicineService;
 import api.regimen.weight.WeightRangeMapper;
 import api.util.DosageAndWeightMapper;
 import metadata.MedicineNameMetaData;
+import metadata.NumberOfMedicineStandardMetaData;
 import model.DosageAndWeight;
 import model.medicineType.MedicineType;
 
@@ -33,5 +34,15 @@ public class CTX960 implements MedicineService {
     @Override
     public String getName() {
         return MedicineNameMetaData.CTX_960;
+    }
+
+    @Override
+    public Integer getStandardDisperseNumberForAdults() {
+        return NumberOfMedicineStandardMetaData.ONE_THOUSAND;
+    }
+
+    @Override
+    public Integer getStandardDisperseNumberForPaediatrics() {
+        return null;
     }
 }

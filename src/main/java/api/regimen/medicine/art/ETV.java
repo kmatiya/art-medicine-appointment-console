@@ -4,6 +4,7 @@ import api.regimen.medicine.MedicineService;
 import api.regimen.weight.WeightRangeMapper;
 import api.util.DosageAndWeightMapper;
 import metadata.MedicineNameMetaData;
+import metadata.NumberOfMedicineStandardMetaData;
 import model.DosageAndWeight;
 import model.medicineType.MedicineType;
 
@@ -29,5 +30,15 @@ public class ETV implements MedicineService {
     @Override
     public String getName() {
         return MedicineNameMetaData.ETV;
+    }
+
+    @Override
+    public Integer getStandardDisperseNumberForAdults() {
+        return NumberOfMedicineStandardMetaData.ONE_HUNDRED_AND_TWENTY;
+    }
+
+    @Override
+    public Integer getStandardDisperseNumberForPaediatrics() {
+        return null;
     }
 }

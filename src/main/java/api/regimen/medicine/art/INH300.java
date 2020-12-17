@@ -4,6 +4,7 @@ import api.regimen.medicine.MedicineService;
 import api.regimen.weight.WeightRangeMapper;
 import api.util.DosageAndWeightMapper;
 import metadata.MedicineNameMetaData;
+import metadata.NumberOfMedicineStandardMetaData;
 import model.DosageAndWeight;
 import model.medicineType.MedicineType;
 
@@ -33,5 +34,15 @@ public class INH300 implements MedicineService {
     @Override
     public String getName() {
         return MedicineNameMetaData.INH_300;
+    }
+
+    @Override
+    public Integer getStandardDisperseNumberForAdults() {
+        return NumberOfMedicineStandardMetaData.SIX_HUNDRED_AND_SEVENTY_TWO;
+    }
+
+    @Override
+    public Integer getStandardDisperseNumberForPaediatrics() {
+        return null;
     }
 }
