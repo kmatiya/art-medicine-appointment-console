@@ -10,14 +10,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class Nvp implements MedicineService {
+public class NVP implements MedicineService {
 
     private final HashMap<String, DosageAndWeight> medicineDosage;
 
-    public Nvp()
+    public NVP()
     {
         medicineDosage = new HashMap<>();
-        List<DosageAndWeight> dosageAndWeightList = new ArrayList<>();
 
         medicineDosage.put(WeightRangeMapper.LESS_THAN_FOUR, DosageAndWeightMapper.setDosageAndWeightOfMedicine(3,3.9,1,1,MedicineType.TABLET));
         medicineDosage.put(WeightRangeMapper.LESS_THAN_SIX, DosageAndWeightMapper.setDosageAndWeightOfMedicine(4,5.9,1,1,MedicineType.TABLET));

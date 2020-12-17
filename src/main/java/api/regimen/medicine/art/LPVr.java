@@ -17,7 +17,6 @@ public class LPVr  implements MedicineService {
     public LPVr()
     {
         medicineDosage = new HashMap<>();
-        List<DosageAndWeight> dosageAndWeightList = new ArrayList<>();
 
         medicineDosage.put(WeightRangeMapper.LESS_THAN_FOUR, DosageAndWeightMapper.setDosageAndWeightOfMedicine(3,3.9,1,1, MedicineType.LIQUID));
         medicineDosage.put(WeightRangeMapper.LESS_THAN_SIX, DosageAndWeightMapper.setDosageAndWeightOfMedicine(4,5.9,1.5,1.5,MedicineType.LIQUID));

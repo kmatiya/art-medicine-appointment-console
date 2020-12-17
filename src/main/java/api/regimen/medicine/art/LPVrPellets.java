@@ -17,7 +17,6 @@ public class LPVrPellets implements MedicineService {
     public LPVrPellets()
     {
         medicineDosage = new HashMap<>();
-        List<DosageAndWeight> dosageAndWeightList = new ArrayList<>();
 
         medicineDosage.put(WeightRangeMapper.LESS_THAN_FOUR, DosageAndWeightMapper.setDosageAndWeightOfMedicine(3,3.9,2,2, MedicineType.TABLET));
         medicineDosage.put(WeightRangeMapper.LESS_THAN_SIX, DosageAndWeightMapper.setDosageAndWeightOfMedicine(4,5.9,2,2,MedicineType.TABLET));
@@ -34,6 +33,6 @@ public class LPVrPellets implements MedicineService {
 
     @Override
     public String getName() {
-        return "LPV/r liquid/tabs";
+        return "LPV/r pellets (in caps)";
     }
 }
