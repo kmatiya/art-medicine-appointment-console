@@ -3,6 +3,7 @@ package api.regimen.medicine.art;
 import api.regimen.medicine.MedicineService;
 import api.regimen.weight.WeightRangeMapper;
 import api.util.DosageAndWeightMapper;
+import metadata.MedicineNameMetaData;
 import model.DosageAndWeight;
 import model.medicineType.MedicineType;
 
@@ -27,6 +28,6 @@ public class TDF3TCEFV implements MedicineService {
 
     @Override
     public String getName() {
-        return "TDF / 3TC / EFV";
+        return MedicineNameMetaData.TDF_3TC_EFV;
     }
 }
