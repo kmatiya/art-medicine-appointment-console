@@ -8,16 +8,17 @@ import model.medicineType.MedicineType;
 
 import java.util.HashMap;
 
-public class TDF3TCEFV implements MedicineService {
+public class TDF3TCDTG implements MedicineService {
 
     private final HashMap<String, DosageAndWeight> medicineDosage;
 
-    public TDF3TCEFV()
+    public TDF3TCDTG()
     {
         medicineDosage = new HashMap<>();
 
-        medicineDosage.put(WeightRangeMapper.LESS_THAN_FORTY, DosageAndWeightMapper.setDosageAndWeightOfMedicine(35,39.9,0,1,MedicineType.TABLET));
-        medicineDosage.put(WeightRangeMapper.ABOVE_FORTY, DosageAndWeightMapper.setDosageAndWeightOfMedicine(40,300,0,1,MedicineType.TABLET));
+        medicineDosage.put(WeightRangeMapper.LESS_THAN_THIRTY_FIVE, DosageAndWeightMapper.setDosageAndWeightOfMedicine(30,34.9,1,0,MedicineType.TABLET));
+        medicineDosage.put(WeightRangeMapper.LESS_THAN_FORTY, DosageAndWeightMapper.setDosageAndWeightOfMedicine(35,39.9,1,0,MedicineType.TABLET));
+        medicineDosage.put(WeightRangeMapper.ABOVE_FORTY, DosageAndWeightMapper.setDosageAndWeightOfMedicine(40,300,1,0,MedicineType.TABLET));
     }
 
     @Override
@@ -27,6 +28,6 @@ public class TDF3TCEFV implements MedicineService {
 
     @Override
     public String getName() {
-        return "TDF / 3TC / EFV";
+        return "TDF / 3TC";
     }
 }
