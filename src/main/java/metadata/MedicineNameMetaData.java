@@ -4,6 +4,7 @@ public class MedicineNameMetaData {
     public static String NVP = "NVP";
     public static String AZT_3TC = "AZT / 3TC";
     public static String AZT_3TC_NVP = "AZT / 3TC / NVP";
+    public static String ABC_3TC = "ABC / 3TC";
     public static String LPV_r_LIQUID_OR_TABLETS = "LPV/r liquid/tabs";
     public static String LPV_r_PELLETS_IN_CAPS = "LPV/r Pellets (in caps)";
     public static String EFV = "EFV";

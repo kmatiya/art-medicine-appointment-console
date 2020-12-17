@@ -3,6 +3,7 @@ package api.regimen.medicine.art;
 import api.regimen.medicine.MedicineService;
 import api.regimen.weight.WeightRangeMapper;
 import api.util.DosageAndWeightMapper;
+import metadata.MedicineNameMetaData;
 import model.DosageAndWeight;
 import model.medicineType.MedicineType;
 
@@ -37,6 +38,6 @@ public class ABC3TC implements MedicineService {
 
     @Override
     public String getName() {
-        return "ABC /3TC";
+        return MedicineNameMetaData.ABC_3TC;
     }
 }

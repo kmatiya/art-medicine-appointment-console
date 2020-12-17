@@ -3,6 +3,7 @@ package api.regimen.medicine.art;
 import api.regimen.medicine.MedicineService;
 import api.regimen.weight.WeightRangeMapper;
 import api.util.DosageAndWeightMapper;
+import metadata.MedicineNameMetaData;
 import model.DosageAndWeight;
 import model.medicineType.MedicineType;
 
@@ -33,6 +34,6 @@ public class LPVrPellets implements MedicineService {
 
     @Override
     public String getName() {
-        return "LPV/r pellets (in caps)";
+        return MedicineNameMetaData.LPV_r_PELLETS_IN_CAPS;
     }
 }
