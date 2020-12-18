@@ -12,7 +12,7 @@ public class WeightRangeMapper {
     public static String LESS_THAN_FORTY = "35 - 39.9 Kg";
     public static String ABOVE_FORTY = "40 Kg +";
 
-    public String getWeight(double weight){
+    public static String getWeightRange(double weight){
         if(weight >= 3 && weight <= 3.9){
             return LESS_THAN_FOUR;
         }
