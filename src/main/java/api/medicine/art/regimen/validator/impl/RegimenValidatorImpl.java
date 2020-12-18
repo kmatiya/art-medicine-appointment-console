@@ -1,6 +1,9 @@
 package api.medicine.art.regimen.validator.impl;
 
+import api.medicine.MedicineService;
 import api.medicine.art.regimen.validator.RegimenValidator;
+
+import java.util.ArrayList;
 
 public class RegimenValidatorImpl implements RegimenValidator {
 
@@ -10,7 +13,7 @@ public class RegimenValidatorImpl implements RegimenValidator {
     }
 
     @Override
-    public boolean isWeightValid(double weight) {
+    public boolean isWeightValid(double weight, ArrayList<MedicineService> drugCombination) {
         return false;
     }
 }
