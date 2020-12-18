@@ -3,7 +3,6 @@ package model;
 public class DosageAndWeight {
     private WeightRange weightRange;
     private Dosage dosage;
-
     public WeightRange getWeightRange() {
         return weightRange;
     }

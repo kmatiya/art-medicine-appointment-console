@@ -6,6 +6,7 @@ import api.util.DosageAndWeightMapper;
 import metadata.MedicineNameMetaData;
 import metadata.NumberOfMedicineStandardMetaData;
 import model.DosageAndWeight;
+import model.DosageRecipientType;
 import model.medicineType.MedicineType;
 
 import java.util.HashMap;
@@ -18,8 +19,8 @@ public class ETV implements MedicineService {
     {
         medicineDosage = new HashMap<>();
 
-        medicineDosage.put(WeightRangeMapper.LESS_THAN_FORTY, DosageAndWeightMapper.setDosageAndWeightOfMedicine(35,39.9,2,2,MedicineType.TABLET));
-        medicineDosage.put(WeightRangeMapper.ABOVE_FORTY, DosageAndWeightMapper.setDosageAndWeightOfMedicine(40,300,2,2,MedicineType.TABLET));
+        medicineDosage.put(WeightRangeMapper.LESS_THAN_FORTY, DosageAndWeightMapper.setDosageAndWeightOfMedicine(35,39.9,2,2,MedicineType.TABLET, DosageRecipientType.ADULT));
+        medicineDosage.put(WeightRangeMapper.ABOVE_FORTY, DosageAndWeightMapper.setDosageAndWeightOfMedicine(40,300,2,2,MedicineType.TABLET,DosageRecipientType.ADULT));
     }
 
     @Override

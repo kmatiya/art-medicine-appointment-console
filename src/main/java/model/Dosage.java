@@ -6,6 +6,7 @@ public class Dosage {
     private double morning;
     private double evening;
     private MedicineType medicineType;
+    private DosageRecipientType dosageRecipientType;
 
     public double getMorning() {
         return morning;
@@ -29,5 +30,13 @@ public class Dosage {
 
     public void setMedicineType(MedicineType medicineType) {
         this.medicineType = medicineType;
+    }
+
+    public DosageRecipientType getDosageRecipientType() {
+        return dosageRecipientType;
+    }
+
+    public void setDosageRecipientType(DosageRecipientType dosageRecipientType) {
+        this.dosageRecipientType = dosageRecipientType;
     }
 }
