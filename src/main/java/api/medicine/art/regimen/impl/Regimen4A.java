@@ -12,12 +12,12 @@ import java.util.ArrayList;
 
 public class Regimen4A implements RegimenService {
 
-    private final AZT3TC azt3TC = new AZT3TC();
-    private EFV efv = new EFV();
     private final ArrayList<MedicineService> medicineServices = new ArrayList<>();
 
     public Regimen4A(){
+        AZT3TC azt3TC = new AZT3TC();
         medicineServices.add(azt3TC);
+        EFV efv = new EFV();
         medicineServices.add(efv);
     }
     @Override
