@@ -11,4 +11,38 @@ public class WeightRangeMapper {
     public static String LESS_THAN_THIRTY_FIVE = "30 - 34.9 Kg";
     public static String LESS_THAN_FORTY = "35 - 39.9 Kg";
     public static String ABOVE_FORTY = "40 Kg +";
+
+    public String getWeight(double weight){
+        if(weight >= 3 && weight <= 3.9){
+            return LESS_THAN_FOUR;
+        }
+        if(weight >= 4 && weight <= 5.9){
+            return LESS_THAN_SIX;
+        }
+        if(weight >= 6 && weight <= 9.9){
+            return LESS_THAN_TEN;
+        }
+        if(weight >= 10 && weight <= 13.9){
+            return LESS_THAN_FOURTEEN;
+        }
+        if(weight >= 14 && weight <= 19.9){
+            return LESS_THAN_TWENTY;
+        }
+        if(weight >= 20 && weight <= 24.9){
+            return LESS_THAN_TWENTY_FIVE;
+        }
+        if(weight >= 25 && weight <= 29.9){
+            return LESS_THAN_THIRTY;
+        }
+        if(weight >= 30 && weight <= 34.9){
+            return LESS_THAN_THIRTY_FIVE;
+        }
+        if(weight >= 35 && weight <=39.9){
+            return LESS_THAN_FORTY;
+        }
+        if(weight >= 40){
+            return ABOVE_FORTY;
+        }
+        return null;
+    }
 }
