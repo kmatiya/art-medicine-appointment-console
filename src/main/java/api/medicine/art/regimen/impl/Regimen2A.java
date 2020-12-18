@@ -11,10 +11,10 @@ import java.util.ArrayList;
 
 public class Regimen2A implements RegimenService {
 
-    private final AZT3TCNVP azt3TCNVP = new AZT3TCNVP();
     private final ArrayList<MedicineService> medicineServices = new ArrayList<>();
 
     public Regimen2A(){
+        AZT3TCNVP azt3TCNVP = new AZT3TCNVP();
         medicineServices.add(azt3TCNVP);
     }
     @Override

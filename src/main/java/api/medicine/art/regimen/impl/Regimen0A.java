@@ -10,12 +10,12 @@ import java.util.ArrayList;
 
 public class Regimen0A implements RegimenService {
 
-    private final ABC3TC abc3TC = new ABC3TC();
-    private final NVP nvp = new NVP();
     private final ArrayList<MedicineService> medicineServices = new ArrayList<>();
 
     public Regimen0A(){
+        ABC3TC abc3TC = new ABC3TC();
         medicineServices.add(abc3TC);
+        NVP nvp = new NVP();
         medicineServices.add(nvp);
     }
     @Override
