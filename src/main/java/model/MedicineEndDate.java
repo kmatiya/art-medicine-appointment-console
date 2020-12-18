@@ -1,17 +1,18 @@
 package model;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class MedicineEndDate {
-    private Calendar calendar;
+    private Date appointmentDate;
     private String medicineName;
 
-    public Calendar getCalendar() {
-        return calendar;
+    public Date getAppointmentDate() {
+        return appointmentDate;
     }
 
-    public void setCalendar(Calendar calendar) {
-        this.calendar = calendar;
+    public void setAppointmentDate(Date appointmentDate) {
+        this.appointmentDate = appointmentDate;
     }
 
     public String getMedicineName() {
