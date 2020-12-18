@@ -22,7 +22,7 @@ public class Regimen8A implements RegimenService {
     }
     @Override
     public String getName() {
-        return RegimenNameMetaData.REGIMEN_4A;
+        return RegimenNameMetaData.REGIMEN_8A;
     }
 
     @Override
