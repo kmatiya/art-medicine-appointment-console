@@ -75,7 +75,7 @@ public class RegimenValidatorImpl implements RegimenValidator {
     public String isWeightValid(double weight, ArrayList<MedicineService> drugCombination) {
         String getWeightRangeOfPatient = WeightRangeMapper.getWeightRange(weight);
         if(getWeightRangeOfPatient == null){
-            return "Weight is out of range, weight should be in the range of 3 to above 40 Kg";
+            return null;
         }
         return getWeightRangeOfPatient;
     }

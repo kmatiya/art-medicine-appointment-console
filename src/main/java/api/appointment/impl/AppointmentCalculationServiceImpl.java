@@ -7,6 +7,7 @@ import model.MedicineEndDate;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class AppointmentCalculationServiceImpl implements AppointmentCalculationService {
@@ -24,7 +25,8 @@ public class AppointmentCalculationServiceImpl implements AppointmentCalculation
             calendar.add(Calendar.DAY_OF_MONTH, (int) daysToNextAppointment);
             MedicineEndDate medicineEndDate = new MedicineEndDate();
             medicineEndDate.setMedicineName(eachMedicine.getName());
-            medicineEndDate.setCalendar(calendar);
+            Date appointmentDate = calendar.getTime();
+            medicineEndDate.setAppointmentDate(appointmentDate);
             medicineEndDateList.add(medicineEndDate);
         }
         return medicineEndDateList;
