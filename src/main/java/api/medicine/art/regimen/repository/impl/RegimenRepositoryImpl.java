@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RegimenRepositoryImpl implements RegimenRepository {
-    private List<Regimen> regimens;
+    private final List<Regimen> regimens;
     public RegimenRepositoryImpl(){
         regimens = new ArrayList<>();
         regimens.add(assignRegimen(RegimenNameMetaData.REGIMEN_0P));
