@@ -7,5 +7,5 @@ import java.util.ArrayList;
 
 public interface RegimenValidator {
     boolean isRegimenNameValid(String regimen);
-    boolean isWeightValid(double weight, ArrayList<MedicineService> drugCombination);
+    String isWeightValid(double weight, ArrayList<MedicineService> drugCombination);
 }
