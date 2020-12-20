@@ -12,23 +12,20 @@ import java.util.List;
 
 public class AppointmentCalculationServiceImpl implements AppointmentCalculationService {
     @Override
-    public List<MedicineEndDate> calculateNextAppointmentDate(Calendar calendar, int numberOfDrugs, String weightRange, ArrayList<MedicineService> getRegimenDrugCombinations) {
-        List<MedicineEndDate> medicineEndDateList = new ArrayList<>();
-        for (MedicineService eachMedicine:getRegimenDrugCombinations) {
-            boolean checkIfCombinationExist = eachMedicine.getDosageAndWeightRange().containsKey(weightRange);
+    public MedicineEndDate calculateNextAppointmentDate(Calendar calendar, int numberOfDrugs, String weightRange, MedicineService getRegimenDrugCombination) {
+
+            boolean checkIfCombinationExist = getRegimenDrugCombination.getDosageAndWeightRange().containsKey(weightRange);
             if(!checkIfCombinationExist) {
                 return null;
             }
-            Dosage getDosage = eachMedicine.getDosageAndWeightRange().get(weightRange).getDosage();
+            Dosage getDosage = getRegimenDrugCombination.getDosageAndWeightRange().get(weightRange).getDosage();
             double sumOfDosage = getDosage.getEvening() + getDosage.getMorning();
             double daysToNextAppointment = numberOfDrugs / sumOfDosage;
             calendar.add(Calendar.DAY_OF_MONTH, (int) daysToNextAppointment);
             MedicineEndDate medicineEndDate = new MedicineEndDate();
-            medicineEndDate.setMedicineName(eachMedicine.getName());
+            medicineEndDate.setMedicineName(getRegimenDrugCombination.getName());
             Date appointmentDate = calendar.getTime();
             medicineEndDate.setAppointmentDate(appointmentDate);
-            medicineEndDateList.add(medicineEndDate);
-        }
-        return medicineEndDateList;
+        return medicineEndDate;
     }
 }
