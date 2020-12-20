@@ -8,5 +8,5 @@ import java.util.Calendar;
 import java.util.List;
 
 public interface AppointmentCalculationService {
-    List<MedicineEndDate>  calculateNextAppointmentDate(Calendar calendar, int numberOfDrugs, String weightRange, ArrayList<MedicineService> getRegimenDrugCombinations);
+    MedicineEndDate  calculateNextAppointmentDate(Calendar calendar, int numberOfDrugs, String weightRange, MedicineService getRegimenDrugCombinations);
 }
