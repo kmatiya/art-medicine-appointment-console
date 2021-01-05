@@ -1,11 +1,11 @@
 package model;
 
-import java.util.Calendar;
 import java.util.Date;
 
 public class MedicineEndDate {
     private Date appointmentDate;
     private String medicineName;
+    private double numberOfDrugs;
 
     public Date getAppointmentDate() {
         return appointmentDate;
@@ -21,5 +21,13 @@ public class MedicineEndDate {
 
     public void setMedicineName(String medicineName) {
         this.medicineName = medicineName;
+    }
+
+    public double getNumberOfDrugs() {
+        return numberOfDrugs;
+    }
+
+    public void setNumberOfDrugs(double numberOfDrugs) {
+        this.numberOfDrugs = numberOfDrugs;
     }
 }

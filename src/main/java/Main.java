@@ -8,11 +8,8 @@ import api.medicine.art.regimen.repository.RegimenRepository;
 import api.medicine.art.regimen.repository.impl.RegimenRepositoryImpl;
 import api.medicine.art.regimen.validator.RegimenValidator;
 import api.medicine.art.regimen.validator.impl.RegimenValidatorImpl;
-import metadata.RegimenNameMetaData;
 import model.MedicineEndDate;
 import model.Regimen;
-
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -37,7 +34,20 @@ public class Main {
             System.out.println("Regimen is invalid.");
         }
         System.out.println("Regimen "+getSelectedRegimen.getName()+" is valid.");
-        String weightRange = regimenValidator.isWeightValid(37, regimenService.getRegimenDrugCombination());
+        System.out.println("Medicine under regimen");
+        Integer option = null;
+        int count=0;
+        if(regimenService.getRegimenDrugCombination().size() > 1){
+            for (MedicineService medicineService: regimenService.getRegimenDrugCombination()) {
+                System.out.println(count+". "+medicineService.getName());
+                count++;
+            }
+        }
+        int medicineSelected =scanner.nextInt();
+        MedicineService medicineService = regimenService.getRegimenDrugCombination().get(medicineSelected);
+        System.out.println("Please provide weight.");
+        int weight =scanner.nextInt();
+        String weightRange = regimenValidator.isWeightValid(weight, regimenService.getRegimenDrugCombination());
         if(weightRange == null){
             System.out.println("Weight is not valid.");
         }
@@ -48,5 +58,14 @@ public class Main {
         Calendar calendar=Calendar.getInstance();
         Date getDate = new Date();
         calendar.setTime(getDate);
+        MedicineEndDate medicineEndDate = appointmentCalculationService.calculateNextAppointmentDate(calendar,12,weightRange,medicineService);
+        if(medicineEndDate != null){
+            System.out.println(medicineEndDate.getMedicineName());
+            System.out.println("Next appointment date for "+ medicineService.getName()+ " is "+ medicineEndDate.getAppointmentDate() +
+                    " and number of drugs is "+medicineEndDate.getNumberOfDrugs());
+        }
+        else {
+            System.out.println("Could not calculate regimen, regimen combination does not exist.");
+        }
     }
 }
