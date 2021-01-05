@@ -11,19 +11,20 @@ import java.util.Date;
 import java.util.List;
 
 public class AppointmentCalculationServiceImpl implements AppointmentCalculationService {
+    public static final int DAYS_IN_A_WEEK = 7;
     @Override
-    public MedicineEndDate calculateNextAppointmentDate(Calendar calendar, int numberOfDrugs, String weightRange, MedicineService getRegimenDrugCombination) {
-
+    public MedicineEndDate calculateNextAppointmentDate(Calendar calendar, int weeks, String weightRange, MedicineService getRegimenDrugCombination) {
             boolean checkIfCombinationExist = getRegimenDrugCombination.getDosageAndWeightRange().containsKey(weightRange);
             if(!checkIfCombinationExist) {
                 return null;
             }
             Dosage getDosage = getRegimenDrugCombination.getDosageAndWeightRange().get(weightRange).getDosage();
             double sumOfDosage = getDosage.getEvening() + getDosage.getMorning();
-            double daysToNextAppointment = numberOfDrugs / sumOfDosage;
+            double daysToNextAppointment = weeks * DAYS_IN_A_WEEK * sumOfDosage;
             calendar.add(Calendar.DAY_OF_MONTH, (int) daysToNextAppointment);
             MedicineEndDate medicineEndDate = new MedicineEndDate();
             medicineEndDate.setMedicineName(getRegimenDrugCombination.getName());
+            medicineEndDate.setNumberOfDrugs(daysToNextAppointment);
             Date appointmentDate = calendar.getTime();
             medicineEndDate.setAppointmentDate(appointmentDate);
         return medicineEndDate;
